@@ -8,6 +8,8 @@ import { ThemeProvider as StyledThemeProvider } from 'styled-components'
 
 import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming'
 
+import GlobalStyles from '../../styles'
+
 import theme from '../../styles/theme'
 
 const ThemeContainer: React.FC = ({ children }) => {
@@ -17,6 +19,7 @@ const ThemeContainer: React.FC = ({ children }) => {
         <ColorModeProvider>
           <EmotionThemeProvider theme={theme}>
             <CSSReset />
+            <GlobalStyles />
             {children}
           </EmotionThemeProvider>
         </ColorModeProvider>
